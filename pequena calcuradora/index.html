@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcuradora</title>
+    <style>
+
+        body {
+            background-color: rgb(132, 181, 255);
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: blue;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.507);
+        }
+
+        header > h1 {
+            font-weight: bolder;
+            font-size: 40px ;
+            color: white;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.507);
+        }
+
+        main {
+            margin: auto 20%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.507);
+        }
+
+        main > div {
+            margin: auto;
+            margin: 20px;
+            padding: 40px;
+            background-color: rgb(185, 255, 255);
+            border: solid 3px blue;
+            text-align: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora simples</h1>
+    </header>
+    <main>
+        <form id="Calculadora" method="post">
+            <label for="num1">Número 1
+                <input type="number" id="num1" required >
+            </label>
+            <br><br>
+            <label for="num2">Número 2
+                <input type="number" id="num2" required >
+            </label>
+            <br><br>
+            <label for="ad">Adiçionar..
+                <input type="button" id="ad">
+            </label>
+            <br>
+            <label for="sub-">Subtrair....
+                <input type="button" id="sub-">
+            </label>
+            <br>
+            <label for="mul*">Multiplicar
+                <input type="button" id="mul*">
+            </label>
+        </form>
+        <div><h2 id="resultado"></h2></div>
+    </main>
+    
+</body>
+</html>
