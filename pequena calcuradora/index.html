@@ -5,76 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcuradora</title>
     <style>
-
-        body {
-            background-color: rgb(132, 181, 255);
+        * {
             margin: 0;
+            padding: 0;
+        }
+        .fundo {
+            background-image: linear-gradient(45deg, rgb(0, 92, 0), rgb(0, 221, 0)
+            );
+            height: 100vh;
+            color: white;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        header {
-            background-color: blue;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.507);
-        }
 
-        header > h1 {
-            font-weight: bolder;
-            font-size: 40px ;
+        .calculadora {
+            background-color: rgba(0, 0, 0, 0.863);
+            border-radius: 15px;
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .botao {
+            width: 50px;
+            height: 50px;
+            margin: 1px;
+            font-size: 25px;
+            cursor: pointer;
             color: white;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.507);
+            background-color: rgb(41, 41, 41);
+            border: none;
         }
 
-        main {
-            margin: auto 20%;
+        .botao:hover {
+            background-color: rgb(8, 8, 8);
+            
+        }
+
+        #resultado {
             background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.507);
+            height: 30px;
+            margin: 5px;
+            font-size: 25px;
+            color: black;
+            text-align: right;
         }
-
-        main > div {
-            margin: auto;
-            margin: 20px;
-            padding: 40px;
-            background-color: rgb(185, 255, 255);
-            border: solid 3px blue;
-            text-align: center;
-        }
-
-
 
     </style>
 </head>
 <body>
-    <header>
-        <h1>Calculadora simples</h1>
-    </header>
-    <main>
-        <form id="Calculadora" method="post">
-            <label for="num1">Número 1
-                <input type="number" id="num1" required >
-            </label>
-            <br><br>
-            <label for="num2">Número 2
-                <input type="number" id="num2" required >
-            </label>
-            <br><br>
-            <label for="ad">Adiçionar..
-                <input type="button" id="ad">
-            </label>
-            <br>
-            <label for="sub-">Subtrair....
-                <input type="button" id="sub-">
-            </label>
-            <br>
-            <label for="mul*">Multiplicar
-                <input type="button" id="mul*">
-            </label>
-        </form>
-        <div><h2 id="resultado"></h2></div>
-    </main>
+    <div class="fundo">
+        <h1>Calculadora do Bruno</h1>
+        <div class="calculadora">
+            <h1>calculadora</h1>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td><Button class="botao" onclick="clean()">C</Button></td>
+                    <td><Button class="botao" onclick="back()" ><</Button></td>
+                    <td><Button class="botao" onclick="insert('/')">/</Button></td>
+                    <td><Button class="botao" onclick="insert('*')">X</Button></td>
+                </tr>
+                <tr>
+                    <td><Button class="botao" onclick="insert('7')">7</Button></td>
+                    <td><Button class="botao" onclick="insert('8')">8</Button></td>
+                    <td><Button class="botao" onclick="insert('9')">9</Button></td>
+                    <td><Button class="botao" onclick="insert('-')">-</Button></td>
+                </tr>
+                <tr>
+                    <td><Button class="botao" onclick="insert('4')">4</Button></td>
+                    <td><Button class="botao" onclick="insert('5')">5</Button></td>
+                    <td><Button class="botao" onclick="insert('6')">6</Button></td>
+                    <td><Button class="botao" onclick="insert('+')">+</Button></td>
+                </tr>
+                <tr>
+                    <td><Button class="botao" onclick="insert('1')">1</Button></td>
+                    <td><Button class="botao" onclick="insert('2')">2</Button></td>
+                    <td><Button class="botao" onclick="insert('3')">3</Button></td>
+                    <td rowspan="2"><Button class="botao" style="height: 105px " onclick="calcular()" >=</Button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><Button class="botao" style="width: 105px;" onclick="insert('0')">0</Button></td>
+                    <td><Button class="botao" onclick="insert('.')">.</Button></td>
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js.js"></script>
     
 </body>
 </html>
